@@ -1,0 +1,1245 @@
+/* =====================================
+   HABESHA ETHIOPIAN RESTAURANT
+   Luxury Restaurant Website
+===================================== */
+
+/* ===== GOOGLE FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#111111;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/* ===== COLORS ===== */
+
+:root{
+
+    --gold:#D4AF37;
+
+    --black:#111111;
+
+    --dark:#1b1b1b;
+
+    --light:#f8f8f8;
+
+    --grey:#888;
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===== NAVIGATION ===== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.navbar{
+
+    width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 0;
+
+}
+
+.logo{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.nav-links{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    font-size:16px;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+/* ===== HERO ===== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+/* Slideshow Images */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:url("images/hero1.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:slideshow 20s infinite;
+
+    z-index:-2;
+
+}
+
+/* Dark Overlay */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    z-index:-1;
+
+}
+
+.hero-content{
+
+    width:90%;
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:68px;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#eeeeee;
+
+    margin-bottom:40px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 45px;
+
+    background:var(--gold);
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:white;
+
+}
+
+/* ===== SLIDESHOW ===== */
+
+@keyframes slideshow{
+
+0%{
+
+background-image:url("images/hero1.jpg");
+
+}
+
+25%{
+
+background-image:url("images/hero2.jpg");
+
+}
+
+50%{
+
+background-image:url("images/hero3.jpg");
+
+}
+
+75%{
+
+background-image:url("images/hero4.jpg");
+
+}
+
+100%{
+
+background-image:url("images/hero1.jpg");
+
+}
+
+}
+
+/* ===== GENERAL ===== */
+
+section{
+
+    padding:110px 9%;
+
+}
+
+h2{
+
+    font-family:'Cinzel',serif;
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-size:46px;
+
+    margin-bottom:45px;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about{
+
+    background:#181818;
+    text-align:center;
+
+}
+
+.about p{
+
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    color:#dddddd;
+
+}
+
+/* =====================================
+   FEATURED DISHES
+===================================== */
+
+.featured{
+
+    background:#111111;
+
+}
+
+.food-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:40px;
+
+}
+
+/* =====================================
+   FOOD CARD
+===================================== */
+
+.food-card{
+
+    position:relative;
+
+    background:#1d1d1d;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    transition:.45s;
+
+}
+
+.food-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 55px rgba(212,175,55,.18);
+
+}
+
+/* FOOD IMAGE */
+
+.food-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.food-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* TEXT */
+
+.food-card h3{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:28px;
+
+    margin:20px;
+
+}
+
+.food-card p{
+
+    margin:0 20px;
+
+    color:#d9d9d9;
+
+}
+
+.food-card span{
+
+    display:block;
+
+    margin:22px 20px 28px;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+/* =====================================
+   BADGES
+===================================== */
+
+.badge{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    z-index:20;
+
+}
+
+/* Chef */
+
+.chef{
+
+    background:#D4AF37;
+
+    color:black;
+
+}
+
+/* Popular */
+
+.popular{
+
+    background:#c62828;
+
+}
+
+/* Vegetarian */
+
+.veg{
+
+    background:#2e7d32;
+
+}
+
+/* Coffee */
+
+.coffee{
+
+    background:#6d4c41;
+
+}
+
+/* Ceremony */
+
+.ceremony{
+
+    background:#8e24aa;
+
+}
+
+/* =====================================
+   CENTER BUTTON
+===================================== */
+
+.center{
+
+    text-align:center;
+
+    margin-top:55px;
+
+}
+
+/* =====================================
+   MENU HERO
+===================================== */
+
+.menu-hero{
+
+    height:55vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+
+    url("images/menu-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.menu-hero h1{
+
+    font-family:'Cinzel',serif;
+
+    color:white;
+
+    font-size:65px;
+
+    margin-bottom:18px;
+
+}
+
+.menu-hero p{
+
+    font-size:20px;
+
+    color:#f2f2f2;
+
+}
+
+/* =====================================
+   SECTION DIVIDER
+===================================== */
+
+section{
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+/* =====================================
+   SMALL ANIMATION
+===================================== */
+
+.food-card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/* =====================================
+   COFFEE EXPERIENCE
+===================================== */
+
+.coffee{
+
+    background:#181818;
+
+}
+
+.coffee-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.coffee-container img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+
+    transition:.5s;
+
+}
+
+.coffee-container img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.coffee-container h3{
+
+    color:var(--gold);
+
+    font-family:'Cinzel',serif;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.coffee-container h4{
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+}
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery{
+
+    background:#111;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =====================================
+   REVIEWS
+===================================== */
+
+.reviews{
+
+    background:#181818;
+
+}
+
+.review-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.review-card{
+
+    background:#222;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.review-card p{
+
+    margin:20px 0;
+
+    color:#ddd;
+
+}
+
+.review-card h4{
+
+    color:var(--gold);
+
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.contact-info h3{
+
+    color:var(--gold);
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.contact-info p{
+
+    color:#ddd;
+
+}
+
+.social-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:var(--gold);
+
+    color:black;
+
+    padding:14px 30px;
+
+    border-radius:35px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.social-btn:hover{
+
+    background:white;
+
+}
+
+/* =====================================
+   MAP
+===================================== */
+
+.map-box iframe{
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    background:#090909;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+}
+
+.footer-logo{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#bdbdbd;
+
+    margin:10px 0;
+
+}
+
+/* =====================================
+   GLASS EFFECT
+===================================== */
+
+.food-card,
+.review-card{
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* =====================================
+   SCROLL BAR
+===================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#e3c35b;
+
+}/* =====================================
+   HERO TEXT ANIMATION
+===================================== */
+
+.hero h1{
+
+    animation:heroTitle 1.5s ease;
+
+}
+
+.hero p{
+
+    animation:heroText 2s ease;
+
+}
+
+.hero .btn{
+
+    animation:heroButton 2.5s ease;
+
+}
+
+@keyframes heroTitle{
+
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes heroText{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes heroButton{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* =====================================
+   NAVBAR WHEN SCROLLING
+===================================== */
+
+header.scrolled{
+
+    background:rgba(0,0,0,.95);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+}
+
+/* =====================================
+   BACK TO TOP BUTTON
+===================================== */
+
+#topBtn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:black;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =====================================
+   WHATSAPP BUTTON
+===================================== */
+
+.whatsapp{
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:32px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* =====================================
+   IMAGE POPUP
+===================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popup img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:20px;
+
+}
+
+.popup span{
+
+    position:absolute;
+
+    top:30px;
+
+    right:45px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    padding:15px;
+
+}
+
+.logo{
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+.food-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.review-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.coffee-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.menu-hero h1{
+
+    font-size:45px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+
+    padding:80px 20px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.hero{
+
+    height:85vh;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+}
